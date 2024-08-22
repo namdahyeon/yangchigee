@@ -1,0 +1,74 @@
+@import url(reset.css);
+@import url(header.css);
+@import url(nav.css);
+
+/* common */
+body { font-size:20px; font-family:AppleSD_M,sans-serif; line-height:1; letter-spacing:1px; }
+a { text-decoration:none; color:#222; }
+
+/* header */
+header { position:fixed; }
+header span.drower_icon { background:url(../img/head_back.png)no-repeat 0 0; }
+header span.set_icon { background:url(../img/head_infor.png)no-repeat 0 0; }
+
+/* searchs */
+main { position:relative; width:100%; padding:75px 15px 85px; overflow-y:auto; box-sizing:border-box; }
+
+/* form */
+form { position:relative; left:calc(100% - 295px); margin:0 15px; width:280px; height:180px; }
+form:after { content:''; position:absolute; top:11px; left:20px; display:block; width:1px; height:27px; background:url(../img/tab4_line.png)no-repeat 0 0; }
+
+form input { position:absolute; right:0; width:100%; height:50px; padding:15px 70px 15px 25px; border:0; border-radius:25px; background-color:#fff; box-shadow:0 5px 10px rgba(0,0,0,.16); font-size:18px; color:#222D40; box-sizing:border-box; }
+form input::-ms-input-placeholder { color:rgba(0,0,0,.2); }
+form input::-webkit-input-placeholder { color:rgba(0,0,0,.2); }
+form input::-moz-placeholder { color:rgba(0,0,0,.2); }
+
+form button { position:absolute; right:0; width:50px; height:50px; border:0; border-radius:50%; background:#5EBDF7 url(../img/tab4_surch.png)no-repeat 50% 50%; box-shadow:0 5px 10px rgba(0,0,0,.16); text-indent:-9999px; overflow:hidden; }
+
+form select { position:absolute; display:inline-block; bottom:20px; right:0; width:124px; padding:5px 20px; border:0; border-radius:30px; box-shadow:0 3px 6px rgba(0,0,0,.16); background:#fff url(../img/surch_down.png)no-repeat calc(100% - 10px) 50%; appearance:none; }
+form select:active { background:#fff url(../img/surch_up.png)no-repeat calc(100% - 10px) 50%; }
+
+main h4 { position:absolute; top:164px; width:calc(100% - 30px); font-size:18px; color:#222D40; text-align:center; }
+
+main h3 { margin-bottom:15px; font-size:22px; color:#222D40; line-height:24px; }
+main h3>span { display:inline-block; margin-top:4px; }
+main h3>a { float:right; display:block; width:24px; height:24px; background:url(../img/survice_more.png)no-repeat 0 0; text-indent:-9999px; overflow:hidden; }
+
+ul.dentistry { margin-bottom:50px; }
+ul.dentistry li { margin-bottom:40px; }
+ul.dentistry li:after { content:'';display:block; clear:both; }
+
+ul.dentistry li dt { position:relative; float:right; width:calc(100% - 76px); margin-bottom:3px; font-size:18px; color:#222D40; line-height:24px; }
+ul.dentistry li dt>span { display:block; margin-top:4px; }
+ul.dentistry li dt>.like { z-index:30; position:absolute; display:block; top:0; right:30px; width:22px; height:22px; text-indent:-9999px; overflow:hidden; }
+ul.dentistry li dt>.like:before { content:''; z-index:35; position:absolute; display:block; top:0; right:0; width:24px; height:24px; background:url(../img/icons-like.png)no-repeat 50% 50%; }
+ul.dentistry li dt>.like:after { content:''; z-index:30; position:absolute; display:block; top:23px; right:12px; width:0; height:0; border-radius:50%; background-color:#5EBDF7; transition:all 1s ease 0s; }
+ul.dentistry li dt>.like.on:after { top:0; right:0; width:22px; height:22px; }
+/* hart */
+.heart { z-index:40; position:absolute; top:-12px; right:31px; display:block; width:21px; height:18px; background:url(../img/heart.png)no-repeat 0 0; transform-origin:bottom; transform:scale(0); animation:none; }
+@keyframes heart{
+    0% {transform:scale(0);}
+    20% {transform:scale(1);}
+    50% { transform:translate(0,0); }
+    70% { transform:translate(-2px,-20px); opacity:1; }
+    85% { transform:translate(1px,-35px); }
+    100% { transform:translate(0,-40px) scale(1); opacity:0; }
+}
+
+ul.dentistry li dt>.share { position:absolute; display:block; top:0; right:0; width:24px; height:24px; background:url(../img/icons-share.png)no-repeat 0 0; text-indent:-9999px; overflow:hidden; }
+
+ul.dentistry li dd:first-of-type { float:left; width:62px; height:62px; border-radius:50%; text-indent:-9999px; overflow:hidden; }
+ul.dentistry li:nth-of-type(1) dd:first-of-type { background:url(../img/surch_1.png)no-repeat 0 0; }
+ul.dentistry li:nth-of-type(2) dd:first-of-type { background:url(../img/surch_2.png)no-repeat 0 0; }
+ul.dentistry li:nth-of-type(3) dd:first-of-type { background:url(../img/surch_3.png)no-repeat 0 0; }
+
+ul.dentistry li dd:last-of-type { float:right; width:calc(100% - 76px); font-size:14px; line-height:16px; color:#222D40; }
+
+ul.view { padding:0 10px; }
+ul.view li { margin-bottom:40px; }
+
+ul.view li dt span { display:inline-block; margin-bottom:8px; font-size:18px; color:rgba(34,45,64,.8); }
+ul.view li dt span:last-of-type { float:right; margin-right:10px; }
+ul.view li dt em { font-size:12px; font-style:normal; color:rgba(34,45,64,.6); }
+ul.view li dt em:first-of-type { margin-right:5px; }
+ul.view li dd { font-size:16px; color:rgba(34,45,64,.6); line-height:20px; }

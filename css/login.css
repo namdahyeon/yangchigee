@@ -1,0 +1,54 @@
+@import url(reset.css);
+/* font */
+@font-face { font-family:AppleSD_M; src:url('../font/AppleSDGothicNeoM.ttf'); }
+
+/* common */
+body { position:fixed; width:100%; height:100%; font-size:20px; font-family:AppleSD_M,sans-serif; line-height:1; letter-spacing:1px; }
+a { text-decoration:none; color:#222; }
+
+/* login */
+/* splash */
+.splash { z-index:100; position:fixed; display:block; width:100%; height:100%; background:url(../img/Yangchigee_w.png)no-repeat 50% 57%,linear-gradient(to bottom,#5EBDF7 10%,#BEE7F6 70%); }
+.splash .sheep { position:relative; left:50%; top:50%; margin-left:-200px; margin-top:-250px; width:400px; height:400px; background:radial-gradient(rgba(255,255,255,.8) 0%,rgba(255,255,255,0) 50%); }
+.splash .sheep img { position:relative; display:block; top:50%; width:149px; height:157px; transform:translateY(-50%); margin:0 auto; }
+
+.splash>span { z-index:120; display:block; position:absolute; display:inline-block; border-radius:50%; background-color:#fff; /* animation:bub 3s ease-in-out 0s infinite alternate; */ box-shadow:0 5px 10px rgba(0,0,0,.2); }
+.splash span.bubble1 { left:2%; transform:translateY(-100px); padding:15px; animation-delay:.8s; }
+.splash span.bubble2 { left:15%; transform:translateY(-100px); padding:5px; }
+.splash span.bubble3 { left:30%; transform:translateY(0px); padding:10px; animation-delay:1.2s; }
+.splash span.bubble4 { left:70%; transform:translateY(-50px); padding:10px; }
+.splash span.bubble5 { right:-1%; transform:translateY(-20px); padding:12px; animation-delay:.4s; }
+
+/* @keyframes bub {
+    0% { transform:translateY(0); }
+    100% { transform:translateY(-100px); }
+} */
+
+.splash .cloud { z-index:50; position:absolute; display:block; bottom:0; width:100%; height:0%; background-color:#fff; }
+.splash .cloud1 { z-index:60; }
+.splash .cloud:after { content:''; position:relative; transform:translateY(-100%); display:block; width:100%; background-size:contain; }
+.splash .cloud1:after { height:162px; background:url(../img/splash_cloud1.png)repeat-x 50% 100%; }
+.splash .cloud2:after { height:170px; background:url(../img/splash_cloud2.png)repeat-x 50% 0%; }
+
+/* login_main */
+main { position:fixed; display:flex; justify-content:center; align-items:center; width:100%; height:100%; background:radial-gradient(#6FCBEC 0%,#BEE7F6 45%,#DEF3FA 80%,#fff 100%); }
+main>div { width:230px; height:492px; }
+
+main .Hi { font-size:36px; text-align:center; color:#fff; }
+main h1 { margin:70px 0; }
+main h1 img { display:block; padding-left:8px; margin:0 auto; }
+main h1 span { display:block; width:144px; height:32px; margin:0 auto; background:url(../img/login_yangchigee.png)no-repeat 0 0; text-indent:-9999px; overflow:hidden; }
+
+/* 폼 */
+main .text_box input { width:100%; padding:12px 30px; border:0; margin-bottom:15px; border-radius:25px; box-shadow:0 5px 10px rgba(0,0,0,.3); font-size:16px; line-height:16px; color:rgba(0,0,0,.6); box-sizing:border-box; }
+main .text_box input:last-of-type { margin-bottom:8px; }
+
+main .text_box span { z-index:30; position:relative; margin:0 8px; }
+main .text_box span:last-of-type { float:right; }
+main .text_box span a { font-size:12px; color:#fff; }
+
+/* Login 버튼 */
+main>button { z-index:40; position:fixed; bottom:0; width:85%; padding:16px 0;padding-left:70px; margin-left:15%; border:0; border-radius:60px 0 0 0; background-color:#5EBDF7; font-size:30px; text-align:left; box-shadow:0 0 30px rgba(0,0,0,.1); box-sizing:border-box; transition:background 0.5s ease 0s; }
+main>button:hover { background-color:#fff; }
+main>button>a { display:block; width:100%; height:100%; color:#fff; transition:color 0.5s ease 0s; }
+main>button:hover a { color:#5ebdf7; }

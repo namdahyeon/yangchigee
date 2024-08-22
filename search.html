@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>surch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-width=1.0, min-width=1.0, user-scalable=no" />
+    <!-- 상태 바의 색상을 정하는 코드 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 모바일 웹을 웹앱 형태로 설정하는 코드 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- 바로가기 아이콘, 아이폰, 안드로이드 둘다 적용 -->
+    <link rel="apple-touch-icon-precomposed" href=".png" />
+    <!-- 인트로 화면을 설정하는 코드 -->
+    <link rel="apple-touch-startup-image" href=".png" />
+
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH9v7T1X8BZG3Qlf65seShfApaNdQov4Q&callback=initMap">
+    </script>
+    <script type="text/javascript">
+    //<![CDATA[
+        let map;
+
+        function initMap() {
+            var uluru = { lat: 37.558573, lng: 127.095144 };
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: uluru,
+                zoom: 15,
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                title:"양치기 치과"
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content:"양치기 치과 양치기로 양양길 88-1"
+            });
+            infowindow.open(map,marker);
+        }
+
+        if(window.addEventListener){
+            window.addEventListener("load",initMap,false);
+        }
+    //]]
+    </script>
+</head>
+<body>
+    <header>
+        <span class="drower_icon"><a href="searchs.html">back</a></span>
+        <span class="set_icon"><a href="#">information</a></span>
+    </header>
+    <main>
+        <dl>
+            <dt><span>양치기 치과</span></dt>
+            <dd>surch image</dd>
+            <dd><em class="like">like</em><em class="share">share</em></dd>    
+            <dd>It is a Yangchigee dentist located in Gangnam-gu, Seoul.</dd>
+        </dl>
+        <div class="kyword">
+            <ul>
+                <li><a href="#">#주말진료</a></li>
+                <li><a href="#">#친절</a></li>
+                <li><a href="#">#강남구</a></li>
+                <li><a href="#">#가성비</a></li>
+                <li><a href="#">#덴탈케어</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <p>09:00 - 22:00</p>
+            <p>With excellent medical staff and state-of-the-art equipment, we will endeavor to impress everyone who visits the Yangchigee dentistry.</p>
+            <p>양치기로 양양길 88-1, 양치기 치과</p>
+        </div>
+        <ul class="img_list">
+            <li><img src="./img/info_1.png" alt="info1"/></li>
+            <li><img src="./img/info_2.png" alt="info2"/></li>
+            <li><img src="./img/info_3.png" alt="info3"/></li>
+            <li><img src="./img/info_4.png" alt="info4"/></li>
+        </ul>
+        <div id="map" class="map">
+        </div>
+    </main>
+
+    <nav class="tabMenu">
+        <ul>
+            <li><a href="index.html">tab1</a></li>
+            <li><a href="tab2.html">tab2</a></li>
+            <li><a href="tab3.html">tab3</a></li>
+            <li class="on"><a href="tab4.html">tab4</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,69 @@
+@import url(reset.css);
+@import url(header.css);
+@import url(drower.css);
+@import url(nav.css);
+
+/* common */
+body { font-size:20px; font-family:AppleSD_M,sans-serif; line-height:1; letter-spacing:1px; }
+a { text-decoration:none; color:#222; }
+a:hover { color:#222; }
+
+/* tab3 */
+main { position:fixed; width:100%; height:calc(100% - 130px); background-color:#BEE7F6; }
+
+/* 캘린더 */
+main #calender { position:relative; }
+main #calender .ui-datepicker-group { transform-origin:top; animation:page 3s forwards .0s 1; }
+main #calender .ui-datepicker-group:nth-of-type(3) { top:35px; transform:translateY(60px) scale(.8); animation:page2 2s forwards 0s 1; }
+main #calender .ui-datepicker-group:nth-of-type(5) { top:70px; transform:translateY(120px) scale(.6); animation:page3 1s forwards 0s 1; }
+@keyframes page {
+    0% { transform:rotateX(120deg); }
+    100% { opacity:1; }
+}
+@keyframes page2 {
+    0% { transform:translateY(-60px) scale(1) rotateX(120deg); }
+    100% { opacity:.8; transform:translateY(60px) translateY(0) scale(.8); }
+}
+@keyframes page3 {
+    0% { transform:translateY(-180px) scale(1) rotateX(120deg); }
+    100% { opacity:.5; transform:translateY(120px) translateY(0) scale(.6); }
+}
+main #calender td { position:relative; }
+main #calender td:after { content:''; position:absolute; display:none; top:5%; right:5%; padding:3px; border-radius:50%; background-color:#53FFF3; }
+main #calender td.on:after { display:block; }
+
+/* 
+main .calender { z-index:3; position:relative; display:block; width:100%; height:380px; padding:0 25px; border-radius:0 0 40px 40px; box-shadow:0 5px 10px rgba(0,0,0,.16); box-sizing:border-box; }
+
+main .calender h2 { padding:40px 10px 25px; font-size:36px; color:#222D40;  }
+
+.calender table, .calender th, .calender td { text-align:center; }
+main .calender table { width:100%; height:235px; font-size:14px; }
+.calender table th { font-weight:normal; opacity:.4; }
+.calender table td { position:relative; color:#222D40; }
+.calender table td:after { content:''; position:absolute; display:none; top:5%; right:5%; padding:3px; border-radius:50%; background-color:#53FFF3; }
+.calender table td.on:after { display:block; }
+.calender table td.day { border-radius:10px; background-color:rgba(204,230,241,.4); } */
+
+main p { z-index:2; position:absolute; left:50%; top:380px; transform:translateX(-50%); width:80%; height:20px; border-radius:0 0 30px 30px; box-shadow:0 3px 6px rgba(0,0,0,.16); background-color:#fff; opacity:.8;}
+main p:last-of-type { z-index:1; position:absolute; width:60%; height:37px; opacity:.5; }
+
+
+/* 일정 리스트 */
+main h3 { z-index:1; position:absolute; bottom:220px; margin-left:25px; font-size:28px; color:#222D40;  }
+main h3 em { font-style:normal; }
+main h3 span { font-size:20px; }
+
+main .tab3_list { z-index:0; position:absolute; bottom:0; width:100%; height:207px; padding-top:40px; overflow-y:auto; }
+main .tab3_list:after { content:''; z-index:9; position:fixed; bottom:270px; width:100%; height:50px; background:linear-gradient(to bottom,#BEE7F6 10%, rgba(190,231,246,0)); }
+
+main .tab3_list dl { position:relative; display:block; padding:20px 20px 20px 75px; margin:0 25px; margin-bottom:12px; border-left:solid 8px #5EBDF7; border-radius:0 15px 15px 0; background-color:#fff; box-shadow:0 3px 30px rgba(0,0,0,.16); animation:sld 2s ease-in-out 2s 1; }
+main .tab3_list dl dt { margin-bottom:10px; font-size:18px; color:#222D40; }
+main .tab3_list dl dd { font-size:14px; line-height:20px; color:#222D40; opacity:.6; }
+main .tab3_list dl dd.time { position:absolute; left:0; top:0; margin:23px; margin-left:15px; }
+
+@keyframes sld{
+    0% { transform:translateY(0); }
+    50% { transform:translateY(-120px); }
+    100% { transform:translateY(0); }
+}

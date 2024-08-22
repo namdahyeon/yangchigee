@@ -1,0 +1,38 @@
+.hasDatepicker { position:relative; width:100%; height:380px; margin:0; }
+.ui-widget-content { border:none; background:none; }
+.ui-datepicker-inline { padding:0; perspective:2000px; }
+
+.ui-datepicker-multi>.ui-datepicker-group { position:absolute; left:0; top:0; height:100%; padding:40px 25px; margin:0;
+    display:block; width:100%; height:380px; border-radius:0 0 40px 40px; box-shadow:0 5px 10px rgba(0,0,0,.16); background-color:#fff; box-sizing:border-box; }
+.ui-datepicker-group:nth-of-type(1) { z-index:40; }
+.ui-datepicker-group:nth-of-type(3) { z-index:30; opacity:.8; box-shadow:0 3px 6px rgba(0,0,0,.16); }
+.ui-datepicker-group:nth-of-type(5) { z-index:20; opacity:.5; box-shadow:0 3px 6px rgba(0,0,0,.16); }
+
+.ui-datepicker-group>.ui-datepicker-header { padding:0 15px 30px; background:none; border:none }
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background:none; border:none; }
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight { border:none; border-radius:10px; background-color:rgba(204,230,241,.4); }
+
+.ui-datepicker-inline { position:relative; width:100%; height:100%; }
+.ui-datepicker-multi .ui-datepicker-group table { width:100%; height:235px; margin:0; }
+
+/* a prev next */
+.hasDatepicker .ui-datepicker-prev,
+.hasDatepicker .ui-datepicker-next { position:absolute; top:-25px; display:block; opacity:.2; }
+.hasDatepicker .ui-datepicker-prev:hover,
+.hasDatepicker .ui-datepicker-next:hover { border:0; background:none; }
+
+/* text */
+.ui-datepicker-header>.ui-datepicker-title { position:relative; margin:0; }
+span.ui-datepicker-year { position:absolute; top:-26px; left:50%; transform:translateX(-50%); font-size:12px; font-weight:normal; }
+span.ui-datepicker-month { float:left; font-size:36px; }
+th>span { font-weight:normal; font-size:14px; opacity:.4; }
+td>a.ui-state-default { text-align:center; font-size:14px; color:#222D40; }
+.ui-datepicker .ui-datepicker-buttonpane button { z-index:50; position:absolute; top:55px; right:40px; padding:2px 8px; margin:0; border:solid 2px #222D40; border-radius:12px; font-size:12px; color:#222D40; opacity:.3; transition:opacity .2s ease 0s; animation:opa 3s ease 0s 1; }
+.ui-datepicker .ui-datepicker-buttonpane button:hover { opacity:1; }
+
+@keyframes opa {
+    0% { opacity:0; }
+}

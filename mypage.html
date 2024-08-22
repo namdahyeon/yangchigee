@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yangchigee</title>
+    <link rel="stylesheet" type="text/css" href="css/mypage.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <span class="drower_icon"><a href="main.html">back</a></span>
+        <span class="set_icon"><a href="#">information</a></span>
+    </header>
+    <main>
+        <p class="profile"><img src="./img/profile.jpg" alt="profile" /></p>
+        <form>
+            <fieldset>
+                <!-- <caption>profile</caption> -->
+                <p class="userID" >
+                    <span>ID</span><strong>userid02</strong>
+                </p>
+                <p class="userName">
+                    <label for="name">성명</label><input type="text" id="name" value="Yanchigee"/>
+                </p>
+                <p class="userPW">
+                    <label for="pw">PW</label><input type="password" id="pw" placeholder="비밀번호를 입력하세요" required/>
+                </p>
+                <p class="userPW2">
+                    <label for="pw2">PW확인</label><input type="password" id="pw2" placeholder="비밀번호를 재입력하세요" required/>
+                </p>
+                <p class="gender">
+                    <span>성별</span>
+                    <label for="man">남</label><input name="gender" type="radio" id="man" required/>
+                    <label for="woman">여</label><input name="gender" id="woman" type="radio" required/>
+                </p>
+                <p class="day">
+                    <label for="day">생년월일</label>
+                    <select class="year">
+                        <option value="">년도</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                    </select>
+                    <select class="month">
+                        <option value="">월</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select class="days">
+                        <option value="">일</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </p>
+                <p class="phone">
+                    <label for="phone">휴대폰</label>
+                    <select class="phone_agency">
+                        <option value="">통신사</option>
+                        <option value="LG">LG</option>
+                        <option value="KT">KT</option>
+                        <option value="SKT">SKT</option>
+                    </select>
+                    <select class="phone_1">
+                        <option value="">-</option>
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                    </select>
+                    <input type="tel" /><input type="tel" />
+                    <button class="proof_demand">인증번호 전송</button>
+                </p>
+                <p class="proof">
+                    <label for="proof">인증번호</label><input type="number" id="proof" placeholder="인증번호를 입력해주세요" />
+                </p>
+                <button class="send" type="submit">내 정보 수정</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

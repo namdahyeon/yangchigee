@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diagnose</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/diagnose.css">
+</head>
+<body>
+    <header>
+        <span class="drower_icon"><a href="tab2.html">back</a></span>
+        <span class="set_icon"><a href="#">information</a></span>
+    </header>
+    <main>
+        <div class="dia">
+            <img src="./img/camera_img.png" alt="AI 촬영"/>
+            <p>양치 진단을 위해<br/>사진을 촬영해보세요!</p>
+            <ul>
+                <li>백태<a href="#"></a></li>
+                <li>잇몸 출혈<a href="#"></a></li>
+                <li>충치<a href="#"></a></li>
+            </ul>
+            <span>키워드</span>
+        </div>
+        <div class="dia_ai">
+            <strong>양치기 간편진단</strong>
+            <span class="camera"><a href="#">카메라 촬영</a></span>
+            <div class="dia_ky">
+                <h3>Ai 진단 키워드 추가</h3>
+                <ul class="Ai_kyword">
+                    <li><a href="#">시림</a></li>
+                    <li><a href="#">통증</a></li>
+                    <li><a href="#">치아흔들림</a></li>
+                </ul>
+                <em>more</em>
+                <form>
+                    <label for="kyword">직접입력</label>
+                    <input id="kyword" type="text" placeholder="키워드를 입력하세요" value="" />
+                    <button type="submit">kyword Up</button>
+                </form>
+            </div>
+            <div class="dia_list">
+                <h4>Ai 진단 리스트</h4><em>more</em>
+            </div>
+        </div>
+    </main>
+
+    <nav class="tabMenu">
+        <ul>
+            <li><a href="index.html">tab1</a></li>
+            <li class="on"><a href="tab2.html">tab2</a></li>
+            <li><a href="tab3.html">tab3</a></li>
+            <li><a href="tab4.html">tab4</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

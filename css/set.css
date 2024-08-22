@@ -1,0 +1,35 @@
+@import url(reset.css);
+@import url(header.css);
+
+/* common */
+body { font-size:20px; font-family:AppleSD_M,sans-serif; line-height:1; letter-spacing:1px; }
+a { text-decoration:none; color:#222; }
+
+/* header */
+header span.drower_icon { background:url(../img/head_back.png)no-repeat 0 0; }
+header span.set_icon { background:url(../img/head_infor.png)no-repeat 0 0; }
+
+/* set */
+main h2 { margin-top:60px; }
+main h2 img { display:block; margin:0 auto; padding-left:8px; }
+main h2 span { display:block; width:144px; height:32px; margin:0 auto; margin-top:2px; background:url(../img/set_yangchigee.png)no-repeat 0 0; text-indent:-9999px; overflow:hidden; }
+
+main ul { width:100%; margin-top:30px; }
+main ul li { width:100%; padding:18px 15px 18px 30px; border-top:solid 1px #CCE6F1; font-size:16px; box-sizing:border-box; }
+main ul li a { color:rgba(0,0,0,.6); }
+main ul li span { color:rgba(0,0,0,.6); }
+main ul li em { float:right; font-style:normal; color:rgba(0,0,0,.6); }
+
+main ul li:nth-of-type(3) a { float:right; }
+main ul li:nth-of-type(4) { background:url(../img/tab2_right2.png)no-repeat calc(100% - 15px) 50%; }
+
+main ul li:nth-of-type(1) a,
+main ul li:nth-of-type(5) a,
+main ul li:nth-of-type(7) a { position:relative; float:right; display:inline-block; top:-5px; width:55px; height:26px; border-radius:13px; background-color:#BEE7F6; transition:background 0.2s ease 0s; }
+main ul li:nth-of-type(1) a:after,
+main ul li:nth-of-type(5) a:after,
+main ul li:nth-of-type(7) a:after { content:''; position:absolute; display:block; left:1px; top:1px; padding:12px; border-radius:50%; background-color:#fff; box-shadow:0 3px 6px rgba(0,0,0,.16); transition:transform 0.2s ease 0s; }
+
+/* 스위치 */
+ul li.switch.on a { background-color:#5EBDF7; }
+ul li.switch.on a:after { transform:translateX(29px); }

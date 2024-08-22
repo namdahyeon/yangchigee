@@ -1,0 +1,54 @@
+@import url(reset.css);
+@import url(header.css);
+
+/* common */
+body { position:fixed; width:100%; height:100%; font-size:20px; font-family:AppleSD_M,sans-serif; line-height:1; letter-spacing:1px; }
+a { text-decoration:none; color:#222; }
+
+/* header */
+header span.drower_icon { background:url(../img/head_back.png)no-repeat 0 0; }
+header span.set_icon { background:url(../img/head_infor.png)no-repeat 0 0; }
+
+/* chat.css */
+main { position:fixed; display:block; width:100%; height:100%; padding:0 15px; background-color:#BEE7F6; box-sizing:border-box; }
+
+/* 날짜 */
+main>p { display:flex; justify-content:center; align-items:center; margin:40px 20px 25px; background:url(../img/chat_line.png)repeat-x 0 50%; }
+main>p>span { padding:0 14px; font-size:14px; color:rgba(0,0,0,.4); background-color:#BEE7F6; }
+
+/* 채팅 */
+main ul { display:flex; flex-direction:column; align-items:flex-start; width:100%; }
+main ul>li { display:inline-block; width:0; height:0;margin-bottom:15px; padding:12px; box-shadow:0 3px 6px rgba(0,0,0,.16); max-width:75%; overflow: hidden; transition:width,height 1s ease 0s; opacity:0; }
+main ul>li:last-of-type { margin-bottom:0; }
+
+
+main dl:nth-of-type(1) ul>li { animation:chat 1s ease 2s 1; }
+ul.myself>li { animation:opa 1s ease 4s 1; animation:chat 1s ease 5s 1; }
+
+
+dl.someone { margin-bottom:20px; opacity:0; }
+dl.someone:after { content:''; display:block; clear:both; }
+dl.someone dt { float:right; width:calc(100% - 72px); margin-bottom:6px; font-size:16px; color:rgba(0,0,0,.6); }
+dl.someone dd:first-of-type { float:left; position:relative; display:flex; justify-content:center; align-items:center; width:66px; height:66px; margin-top:4px; border-radius:50%; background-color:#fff; box-shadow:0 3px 6px rgba(0,0,0,.16); }
+
+dl.someone dd>img { width:57px; height:57px; border-radius:50%; box-shadow:0 3px 6px rgba(0,0,0,.16); }
+dl.someone dd:last-of-type { float:right; width:calc(100% - 72px); }
+
+dl.someone dd>ul>li { border-radius:0 30px 30px 30px; font-size:14px; line-height:18px; color:rgba(0,0,0,.6); background-color:#fff; }
+
+ul.myself { align-items:flex-end; margin-bottom:5px; }
+ul.myself>li { border-radius:30px 0 30px 30px; font-size:14px; line-height:18px; background-color:#5EBDF7; color:#fff; }
+
+
+/* 채팅입력 키보드 */
+.keybord { position:fixed; display:block; width:100%; bottom:0; padding:8px; background:#D8D9DD; box-sizing:border-box; }
+
+.keybord>form { display:flex; justify-content:space-between; }
+.keybord input[type="file"] { width:32px; height:32px; border-radius:8px; background:#EBEDF0 url(../img/chat_plus.png)no-repeat 50% 50%; text-indent:-9999px; overflow:hidden; }
+.keybord input[type="text"] { width:calc(100% - 96px); padding:5px 10px; border:0; border-radius:6px; background-color:#aaa; font-size:18px; }
+.keybord input[type="text"]:hover { background-color:#fff; }
+.keybord button { width:32px; height:32px; border:0; border-radius:8px; background:#EBEDF0 url(../img/survice_up.png)no-repeat 50% 50%; text-indent:-9999px; overflow:hidden; }
+
+.keybord p.bord { height:0; width:100%; }
+.keybord p.bord>img { width:100%; }
+.keybord.on p.bord { height:auto; }

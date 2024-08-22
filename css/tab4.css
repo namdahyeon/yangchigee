@@ -1,0 +1,92 @@
+@import url(reset.css);
+@import url(header.css);
+@import url(drower.css);
+@import url(nav.css);
+
+/* common */
+body { width:100%; font-size:20px; font-family:AppleSD_M,sans-serif; line-height:1; letter-spacing:1px; }
+a { text-decoration:none; color:#222; }
+
+/* tab4 */
+main { width:100%; position:relative; }
+
+/* 검색 */
+form { z-index:40; position:absolute; top:15px; right:15px; width:50px; border-radius:25px; overflow:hidden; box-shadow:0 5px 10px rgba(0,0,0,.16); transition:width 0.2s ease 0s; }
+form.on { width:280px; }
+form:after { content:''; z-index:41; position:absolute; top:11px; left:20px; display:block; width:1px; height:27px; background:url(../img/tab4_line.png)no-repeat 0 0; transform:translateX(280px); transition:transform 0.2s ease 0s; }
+form.on:after { transform:translateX(0); }
+
+form input { position:relative; width:100%; height:50px; padding:0; border:0; border-radius:25px; background-color:#fff; font-size:18px; color:#222D40; box-sizing:border-box; transform:translateX(100%); transition:all 0.2s ease 0s; }
+form.on input { transform:translateX(0); padding:15px 70px 15px 25px; }
+form input::-ms-input-placeholder { color:rgba(0,0,0,.2); }
+form input::-webkit-input-placeholder { color:rgba(0,0,0,.2); }
+form input::-moz-placeholder { color:rgba(0,0,0,.2); }
+
+form button { position:absolute; right:0; width:50px; height:50px; border:0; border-radius:50%; background:#5EBDF7 url(../img/tab4_surch.png)no-repeat 50% 50%; }
+form button>a { display:block; width:100%; height:100%; }
+
+/* 배너 */
+.banner { position:relative; height:190px; width:100%; border-radius:0 0 60px 60px; margin-bottom:50px; box-shadow:0 5px 30px rgba(0,0,0,.3); overflow:hidden; background-color:#fff; }
+.banner ul>li { float:left; text-indent:-9999px; overflow:hidden; }
+
+a.next,a.prev { z-index:35; display:inline-block; position:absolute; top:0; left:0; width:10%; height:100%; background-color:#000; opacity:0; text-indent:-9999px; overflow:hidden; }
+a.next { left:auto; right:0; }
+
+.banner ul.control { z-index:40; position:absolute; bottom:10px; right:50px; }
+.banner ul.control>li>a { display:block; width:8px; height:8px; margin-left:4px; border-radius:50%; background-color:#fff; opacity:.4; transition:opacity 0.2s ease 0s; }
+.banner ul.control>li.on>a { opacity:1; }
+
+.banner ul.banner_list { position:relative; display:block; width:100%; height:100%; }
+.banner ul.banner_list li { z-index:20; position:absolute; display:block; width:100%; height:100%; opacity:0; transition:opacity 1s ease 0s; background-size:cover; }
+.banner ul.banner_list li:nth-of-type(1) { background:url(../img/tab4_banner2.jpg)no-repeat 0 0%; background-size:cover; }
+.banner ul.banner_list li:nth-of-type(2) { background:url(../img/tab4_banner3.jpg)no-repeat 0 30%; background-size:cover; }
+.banner ul.banner_list li:nth-of-type(3) { background:url(../img/tab4_banner1.jpg)no-repeat 0 50%; background-size:cover; }
+.banner ul.banner_list li:nth-of-type(4) { background:url(../img/tab4_banner4.jpg)no-repeat 0 80%; background-size:cover; }
+.banner ul.banner_list li>a { display:block; width:100%; height:100%; }
+.banner ul.banner_list li.view { z-index:30; opacity:1; }
+
+main h2 { margin-bottom:5px; font-size:22px; color:#222D40; }
+
+/* 이벤트리스트 */
+.event { margin-bottom:40px; padding-left:20px; box-sizing:border-box; }
+.event>p { font-size:14px; color:#222D40; box-sizing:border-box; opacity:.4; }
+.event>div { width:100%; padding-left:20px; margin-left:-20px; margin-bottom:-13px; overflow-x:auto; }
+.event ul { width:760px; margin-top:20px; margin-bottom:13px; animation:sld 2s ease-in-out 2s 1; }
+.event ul:after { content:''; display:block; clear:both; }
+.event ul>li { position:relative; float:left; width:240px; height:140px; border-radius:15px; margin-right:12px; background-size:auto; box-shadow:0 3px 10px rgba(0,0,0,.16); }
+.event ul>li:nth-of-type(1) { background:#222 url(../img/tab4_event1.png)no-repeat 50% 50%; }
+.event ul>li:nth-of-type(2) { background:#222 url(../img/tab4_banner1.png)no-repeat 50% 50%; }
+.event ul>li:nth-of-type(3) { background:#222 url(../img/tab4_event2.png)no-repeat 50% 50%; }
+.event ul>li>a { display:block; width:100%; height:100%; border-radius:15px; background-color:rgba(0,0,0,.5); }
+.event ul>li span { position:absolute; left:16px; bottom:10px; font-size:20px; line-height:24px; color:#fff; }
+
+
+/* 샵리스트 */
+.shop { padding-left:20px; box-sizing:border-box; }
+.shop>div { width:100%; padding-left:20px; margin-left:-20px; overflow-x:auto; }
+.shop>p { font-size:14px; color:#222D40; opacity:.4; }
+.shop ul { width:700px; margin-top:20px; animation:sld 2s ease-in-out 4s 1; }
+.shop ul:after { content:''; display:block; clear:both; }
+.shop ul>li { position:relative; float:left; width:100px; height:120px; border-radius:15px; margin-right:14px; margin-bottom:20px; box-shadow:0 5px 10px rgba(0,0,0,.16); }
+.shop ul>li:nth-of-type(1) { background:url(../img/tab4_shop1.png)no-repeat 50% 0; }
+.shop ul>li:nth-of-type(2) { background:url(../img/tab4_shop2.png)no-repeat 50% 0; }
+.shop ul>li:nth-of-type(3) { background:url(../img/tab4_shop3.png)no-repeat 50% 0; }
+.shop ul>li:nth-of-type(4) { background:url(../img/tab4_shop4.png)no-repeat 50% 0; }
+.shop ul>li:nth-of-type(5) { background:url(../img/tab4_shop5.png)no-repeat 50% 0; }
+.shop ul>li:nth-of-type(6) { background:url(../img/tab4_shop6.jpg)no-repeat 50% 0; }
+
+.shop ul>li em.picto { z-index:10; position:absolute; left:9px; bottom:28px; display:block; width:34px; height:34px; border-radius:50%; background:#fff; box-shadow:0 5px 10px rgba(0,0,0,.16); }
+.shop ul>li:nth-of-type(1) em.picto { background:#fff url(../img/shop_icon1.png)no-repeat 50% 100%; }
+.shop ul>li:nth-of-type(2) em.picto { background:#fff url(../img/shop_icon2.png)no-repeat 50% 100%; }
+.shop ul>li:nth-of-type(3) em.picto { background:#fff url(../img/shop_icon3.png)no-repeat 50% 80%; }
+.shop ul>li:nth-of-type(4) em.picto { background:#fff url(../img/shop_icon1.png)no-repeat 50% 100%; }
+.shop ul>li:nth-of-type(5) em.picto { background:#fff url(../img/shop_icon2.png)no-repeat 50% 100%; }
+.shop ul>li:nth-of-type(6) em.picto { background:#fff url(../img/shop_icon3.png)no-repeat 50% 80%; }
+
+.shop ul>li span { position:absolute; bottom:0; display:inline-block; width:100%; padding:15px 0 10px; border-radius:0 0 15px 15px; text-align:center; font-size:16px; background-color:#fff; color:rgba(34,45,64,.6); }
+
+@keyframes sld{
+    0% { transform:translateX(0%); }
+    50% { transform:translateX(-150px); }
+    100% { transform:translateX(0%); }
+}

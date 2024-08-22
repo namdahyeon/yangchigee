@@ -1,0 +1,37 @@
+@import url(reset.css);
+
+/* drower */
+.drower { z-index:60; position:fixed; left:0; top:0; width:310px; height:100%; margin:0; background:linear-gradient(to top, #BEE7F6 0%, #F3F3F3 50%); box-shadow:none; left:-310px; transition:all 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 0s; }
+.drower.on { left:0; box-shadow:0 0 0 9999px rgba(0,0,0,.4); }
+
+.drower span.drower_close { position:absolute; display:inline-block; margin-top:18px; margin-left:10px; }
+.drower span.drower_close a { display:inline-block; }
+
+.drower p.profile { margin-top:83px; text-align:center; }
+.drower p.profile a { display:block; margin-left:calc(50% - 53px); width:105px; height:105px; border-radius:50%; overflow:hidden; }
+.drower p.profile a img { width:100%; }
+.drower p.profile span { display:block; margin-top:11px; color:#222D40; }
+
+.drower ul { margin-top:70px; margin-left:40px; }
+.drower ul li { margin-bottom:33px; }
+.drower ul li a { font-size:22px; line-height:30px; color:#222D40; }
+
+.drower p.drower_bot { position:absolute; width:100%; bottom:38px; padding:0 40px; box-sizing:border-box; }
+.drower p.drower_bot span {  }
+.drower p.drower_bot span:first-of-type { float:left; }
+.drower p.drower_bot span:last-of-type { float:right; }
+.drower p.drower_bot span a { display:block; font-size:14px; color:rgba(34,45,64,.5); }
+
+/* 구름bg */
+.drower span.cloud1 { z-index:-1; position:absolute; display:block; left:0; bottom:0; width:100%; height:346px; background:url(../img/drower_cloud1.png)no-repeat -83px calc(100% + 58px); }
+.drower span.cloud2 { z-index:-2; position:absolute; display:block; left:0; bottom:0; width:100%; height:228px; background:url(../img/drower_cloud2.png)no-repeat -68px 100%; }
+.drower em { z-index:5; position:absolute; display:block; bottom:0; border-radius:50%; background-color:#fff; animation:bub 2s ease-in-out 0s infinite alternate; }
+.drower em:nth-of-type(1) { width:10px; height:10px; left:-1%; bottom:291px; animation-delay:.4s; }
+.drower em:nth-of-type(2) { width:20px; height:20px; left:20%; bottom:228px; }
+.drower em:nth-of-type(3) { width:20px; height:20px; left:70%; bottom:209px; animation-delay:.4s; }
+.drower em:nth-of-type(4) { width:28px; height:28px; left:80%; bottom:248px; animation-delay:1s; }
+
+@keyframes bub {
+    0% { transform:translateY(0); }
+    100% { transform:translateY(20px); }
+}

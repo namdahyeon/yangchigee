@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab3</title>
+    <link rel="stylesheet" type="text/css" href="css/tab3.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> 
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tab3_calender.css">
+    <script type='text/javascript'>
+    //<![CDATA[
+        $(function() { 
+            $.datepicker.regional['ko'] = { 
+                closeText: 'close', 
+                prevText: 'prev', 
+                nextText: 'next', 
+                currentText: 'today', 
+                monthNames: ['Jan','Fab','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], 
+                monthNamesShort: ['1월','2월','3월','4월','5월','6월', '7월','8월','9월','10월','11월','12월'], 
+                dayNames: ['일','월','화','수','목','금','토'], 
+                dayNamesShort: ['일','월','화','수','목','금','토'], 
+                dayNamesMin: ['S','M','T','W','T','F','S'], 
+                weekHeader: 'Wk', 
+                dateFormat: 'yy-mm-dd', 
+                firstDay: 0, 
+                isRTL: false, 
+                duration:200, 
+                showAnim:'show', 
+                showMonthAfterYear: true, 
+                yearSuffix: ''
+            }; 
+            $.datepicker.setDefaults($.datepicker.regional['ko']);  
+            $( "#calender" ).datepicker({
+                dateFormat: 'yy-mm-dd', 
+                changeMonth: false,
+                changeYear: false,
+                nextText: 'next',
+                prevText: 'prev',
+                numberOfMonths: [3,1],
+                stepMonths: 1,
+                showButtonPanel: true,
+                currentText: 'today' ,
+                closeText: 'close',
+                showAnim: "none",
+                buttonImage: "",
+                buttonImageOnly: true
+            });  
+            $("#calender").change(function(){
+                // 날짜 클릭시 처리할 로직 추가.
+            });
+            var Cday = '';
+            /* tab3 selectday 체인지 */
+            $("#calender td").click(function(e){
+                e.preventDefault();
+                var Cday= $(this).text();
+                $(".today>em").text(Cday);
+            });
+
+        });
+    //]]
+    </script> 
+</head>
+<body>
+    <header>
+        <span class="drower_icon"><a href="#">drower menu</a></span>
+        <span class="set_icon"><a href="set.html">set_up</a></span>
+    </header>
+
+    <main>
+        <div id="calender"></div>
+
+        <h3 class="today"><em>00</em><span>day</span></h3>
+        <div class="tab3_list">
+            <dl>
+                <dt>칫솔을 교체해주세요</dt>
+                <dd class="time">all</dd>
+                <dd class="list">칫솔을 교체한지 3개월이 지났어요!<br/>칫솔 구입입: 2020년 06월 29일</dd>
+            </dl>
+            <dl>
+                <dt>양치기 치과 방문</dt>
+                <dd class="time">09:00</dd>
+                <dd class="list">서울시 강남구 OO동 OO건물 2층<br/>미백 치료 160,000원</dd>
+            </dl>
+            <dl>
+                <dt>깜빡하지 말아요</dt>
+                <dd class="time">22:00</dd>
+                <dd class="list">자기전에도 꼭 양치하는 습관</dd>
+            </dl>
+        </div>
+    </main>
+    
+    <div class="drower">
+        <span class="drower_close"><a href="#"><img src="./img/drower_close.png" alt="메뉴 닫기" /></a></span>
+        <p class="profile">
+            <a href="#"><img src="./img/profile.jpg" alt="user_profile"/></a>
+            <span>Yanchigee</span>
+        </p>
+        <ul class="drower_menu">
+            <li><a href="mypage.html">내 정보</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="survice.html">고객지원</a></li>
+        </ul>
+        <p class="drower_bot">
+            <span><a href="version.html">버전정보</a></span>
+            <span><a href="#">로그아웃</a></span>
+        </p>
+        <span class="cloud1"></span><span class="cloud2"></span>
+        <em></em><em></em><em></em><em></em>
+    </div>
+
+    <nav class="tabMenu">
+        <ul>
+            <li><a href="main.html">tab1</a></li>
+            <li><a href="tab2.html">tab2</a></li>
+            <li class="on"><a href="tab3.html">tab3</a></li>
+            <li><a href="tab4.html">tab4</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

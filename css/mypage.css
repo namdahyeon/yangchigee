@@ -1,0 +1,58 @@
+@import url(reset.css);
+@import url(header.css);
+
+/* common */
+body { font-size:20px; font-family:AppleSD_M,sans-serif; line-height:1; letter-spacing:1px; }
+a { text-decoration:none; color:#222; }
+
+/* header */
+header { position:fixed; }
+header span.drower_icon { background:url(../img/head_back.png)no-repeat 0 0; }
+header span.set_icon { background:url(../img/head_infor.png)no-repeat 0 0; }
+
+/* mypage.css */
+main { padding-top:60px; overflow-y:auto; box-sizing:border-box; }
+
+/* 프로필이미지 */
+main .profile { display:block; width:105px; height:105px; border-radius:50%; margin:60px auto 40px; overflow:hidden; }
+main .profile>img { width:100%; }
+
+/* 폼 */
+main form { margin:0 30px; margin-bottom:50px; }
+
+main form p { position:relative; width:100%; margin-bottom:14px;  }
+main form label,main form span { display:inline-block; width:20%; font-size:14px; color:rgba(34,45,64,.8); }
+main form input { width:80%; padding:10px; border:solid 1px #BEE7F6; border-radius:8px; box-sizing:border-box; font-size:14px; color:rgba(34,45,64,.8); }
+form input::-ms-input-placeholder { color:rgba(34,45,64,.3); }
+form input::-webkit-input-placeholder { color:rgba(34,45,64,.3); }
+form input::-moz-placeholder { color:rgba(34,45,64,.3); }
+
+main form select { padding:10px; border:solid 1px #BEE7F6; border-radius:8px; box-sizing:border-box; font-size:14px; color:rgba(34,45,64,.8); }
+
+/* 개별 */
+/* 성별 */
+main form p.gender { margin:20px 0; }
+main form p.gender:after { content:''; display:block; clear:both; }
+main form p.gender span { float:left; line-height:21px; }
+main form p.gender label { width:auto; float:left; line-height:21px; }
+main form p.gender label:last-of-type { float:right; margin-right:36px; }
+main form p.gender input { position:absolute; left:calc(20% + 30px); top:0;width:21px; height:21px; margin:0; }
+main form p.gender input:last-of-type { left:auto; right:0; }
+/* 생년월일 */
+main form p.day { display:flex; align-items:center; margin:20px 0; }
+main form p.day label { float:left; }
+main form p.day select { float:left; width:20%; margin-left:5%; }
+main form p.day select:first-of-type { width:30%; margin-left:0; }
+/* 휴대폰 */
+main form p.phone label { float:left; line-height:40px;}
+main form p.phone select { float:left; width:25%; margin-left:5%; }
+main form p.phone select:first-of-type { width:80%; margin-left:0; margin-bottom:10px; }
+main form p.phone select:nth-of-type(2) { margin-left:20%; }
+
+main form p.phone input { float:left; width:25%; margin-left:2.5%; }
+
+
+/* 버튼 */
+main form button.proof_demand { display:inline-block; width:80%; padding:5px 0; border:0; border-radius:10px; margin:10px 0 5px 20%; background-color:#BEE7F6; font-size:14px; color:rgba(34,45,64,.8); }
+
+main form button.send { display:block; width:100%; padding:12px 0; border:0; border-radius:34px; margin:50px auto 0; background-color:#5EBDF7; box-shadow:0 3px 6px rgba(0,0,0,.16); font-size:20px; color:#fff; }
